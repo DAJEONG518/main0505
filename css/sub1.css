@@ -1,0 +1,80 @@
+﻿@charset "utf-8";
+
+body { margin:0 auto; max-width:61.25rem; font-family:"NotoSansKR", 고딕; font-weight:bold; /*background:url(../img/bg_grid.gif), url(../작업완성/레이아웃.img/re_sub02_레이아웃_수정.jpg) no-repeat top center;  */}
+
+#wrapper {
+	display: grid; 
+	grid-template-columns:1fr;
+	grid-template-rows : repeat(2, auto) 1fr;
+	grid-template-areas:	'header'
+								'section'
+								'footer';
+	gap : 2rem;
+}
+
+/*header 얌얌*/
+header { 
+	grid-area:header; 
+}
+	#top { 
+		display:flex; 
+		justify-content:space-between;
+		margin-top:-0.5rem;
+	}
+		#top h1 { padding-left:3.75rem;}
+		#top .gnv { font-size:2.5rem;}
+			#top .gnv a{ padding:0 1.875rem 0 1.5625rem;}
+			
+/*section 얌얌*/
+section{
+	grid-area:section; 
+	display:grid;
+	grid-template-columns:1fr;
+	grid-template-rows : repeat(3, auto);
+	gap : 2rem;
+}
+	h2 { width: 980px; height: 100px; font-size:1.5rem; padding-left:5.3rem; line-height:2rem;}
+		h2 img { display:block;}
+		h2 span { font-size:1.12rem; color:#666; font-family:Nexa, arial; }
+		
+	#firstSec{ width: 980px; height: 500px; background:url(../img/인사말이미지.jpg) no-repeat 100%/cover;}
+		#firstOne { position: relative; width: 980px; height: 30%; display:flex; color:#fff; outline: 1px solid red;}
+			#firstOne h3 { position: absolute; top: 30px; left: 30px; text-indent:1.9rem; font-size:40px; font-family:Nexa, arial; }
+			#firstOne p { position: absolute; top: 30px; right: 30px;}
+
+		#firstTwo { display:flex; justify-content:space-around;}
+			#firstTwo img { margin-bottom: 10px;}
+			#firstTwo p { display:flex; flex-direction:column; justify-content:center; margin-left:0.4rem; padding-left:1.9rem; width:15.1rem; height:16.4rem; background-color:#fff; font-size:1.5rem; line-height:0.9rem; }
+			#firstTwo p:nth-of-type(1) {border-radius:0 0 1rem 0;}
+			#firstTwo p:nth-of-type(2) {border-radius:0 0 1rem 1rem;}
+			#firstTwo p:nth-of-type(3) {border-radius:0 0 0 1rem;}
+				#firstTwo p span { font-size:0.875rem; color:#666; margin-top:1.9rem; line-height:1rem;}
+				
+	#secondSec { 
+		/*display:grid;
+		grid-template-columns:1fr;
+		grid-template-rows:repeat(3, auto);
+		gap:3rem;*/
+		padding:3.8rem 4.4rem;
+	}
+		#secondOne, #secondTwo, #secondThree { display:flex; justify-content:space-between;}
+		#secondOne { margin-bottom:2.6rem;}
+			#secondOne h4 { text-indent:1.9rem; font-size:2rem;}
+			#secondOne p { color:#666;}
+		
+		#secondTwo, #secondThree { padding:3rem 1.2rem; border-top:2px solid #666;}
+		#secondThree { border-bottom:2px solid #666;}
+			#secondTwo p, #secondThree p { color:#666; font-family:Nexa, arial; font-size:2.5rem; line-height:3rem;}
+				#secondTwo p span, #secondThree p span { display:inline-block; font-size:0.875rem; font-family:"NotoSansKR", 고딕; line-height:1.3rem;}
+				#secondTwo img, #secondThree img { box-shadow: 2px 3px 5px  #777; border-radius:10px; width:30rem; }
+		
+		
+		
+		
+		
+/*footer 얌얌*/
+footer { grid-area:footer; padding:3.2rem 0 3.2rem 0;}
+	#map, #law { margin-left:5.19rem; display:inline-block; font-size:0.75rem; }
+	#law { margin-left:2rem;}
+	footer img { display:block; margin:0.62rem 0 0 5.19rem; }
+	footer address { margin-left:5.19rem; font-size:0.625rem; color:#666; line-height:-0.0625rem;}
